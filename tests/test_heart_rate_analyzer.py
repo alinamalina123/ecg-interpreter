@@ -10,9 +10,10 @@ from ecg_interpreter.consts.consts import LOW_HEART_RATE, HIGH_HEART_RATE
         (LOW_HEART_RATE - 0.1, Diagnosis.BRADYCARDIA),  # 59.9 - Брадикардия
         (LOW_HEART_RATE, Diagnosis.NORMAL),           # 60.0 - Нижняя граница нормы
         (HIGH_HEART_RATE, Diagnosis.NORMAL),          # 100.0 - Верхняя граница нормы
-        (HIGH_HEART_RATE + 1, Diagnosis.TACHYCARDIA), # 100.1 - Тахикардия
+        (HIGH_HEART_RATE + 0.1, Diagnosis.TACHYCARDIA), # 100.1 - Тахикардия
         (50.0, Diagnosis.BRADYCARDIA),                # Явная брадикардия
         (120.0, Diagnosis.TACHYCARDIA),               # Явная тахикардия
+        (80.0, Diagnosis.NORMAL),                     # 80.0 - Явная норма
     ]
 )
 def test_analyze_heart_rate_positive(heart_rate, expected_diagnosis):

@@ -42,3 +42,32 @@ def arrhythmia_ecg_data():
         st_segment=STSegment.NORMAL,
         q_wave=False
     )
+
+@pytest.fixture
+def suspected_infarction_ecg_data():
+    """Фикстура для подозрения на инфаркт (элевация ST без зубца Q)."""
+    return ECGData(
+        heart_rate=90.0,
+        rhythm=Rhythm.REGULAR,
+        st_segment=STSegment.ELEVATION,
+        q_wave=False
+    )
+
+@pytest.fixture
+def previous_infarction_ecg_data():
+    """Фикстура для перенесенного инфаркта (зубец Q без элевации ST)."""
+    return ECGData(
+        heart_rate=75.0,
+        rhythm=Rhythm.REGULAR,
+        st_segment=STSegment.NORMAL,
+        q_wave=True
+    )
+@pytest.fixture
+def tachycardia_ecg_data():
+    """Фикстура для тахикардии (высокий ЧСС, остальное в норме)."""
+    return ECGData(
+        heart_rate=120.0,
+        rhythm=Rhythm.REGULAR,
+        st_segment=STSegment.NORMAL,
+        q_wave=False
+    )
