@@ -1,0 +1,1 @@
+{"uuid": "4eccd8b0-7659-483b-814c-d1efb1bbe2e7", "children": ["c1a24037-7911-4eb8-8c8a-9397aac4a8ce"], "befores": [{"name": "suspected_infarction_ecg_data", "status": "passed", "start": 1794918120946, "stop": 1794918120946}], "afters": [{"name": "suspected_infarction_ecg_data::<lambda>", "start": 1794918120947}], "start": 1794918120946, "stop": 1794918120947}

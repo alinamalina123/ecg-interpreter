@@ -1,0 +1,1 @@
+{"uuid": "0ab6dafe-aa59-49d7-87cd-a6a7492d69ba", "befores": [{"name": "heart_rate", "status": "passed", "start": 1794677377553, "stop": 1794677377553}], "afters": [{"name": "heart_rate::<lambda>", "start": 1794677377557}], "start": 1794677377553, "stop": 1794677377557}

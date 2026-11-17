@@ -1,6 +1,15 @@
 ﻿import pytest
 from ecg_interpreter.models.ecg_data import ECGData, STSegment, Rhythm
 
+@pytest.fixture
+def ecg_dataset():
+    """Фикстура со списком данных ЭКГ для тестирования агрегаций (среднее, диапазон)."""
+    return [
+        ECGData(heart_rate=60.0, rhythm=Rhythm.REGULAR, st_segment=STSegment.NORMAL, q_wave=False),
+        ECGData(heart_rate=80.0, rhythm=Rhythm.REGULAR, st_segment=STSegment.NORMAL, q_wave=False),
+        ECGData(heart_rate=100.0, rhythm=Rhythm.REGULAR, st_segment=STSegment.NORMAL, q_wave=False),
+    ]
+
 
 @pytest.fixture
 def normal_ecg_data():
@@ -71,3 +80,14 @@ def tachycardia_ecg_data():
         st_segment=STSegment.NORMAL,
         q_wave=False
     )
+
+#2 часть
+@pytest.fixture
+def empty_ecg_dataset():
+    """Фикстура с пустым списком данных ЭКГ."""
+    return []
+
+@pytest.fixture
+def none_ecg_data():
+    """Фикстура с отсутствующими данными ЭКГ."""
+    return None
