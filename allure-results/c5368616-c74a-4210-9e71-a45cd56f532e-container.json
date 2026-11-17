@@ -1,0 +1,1 @@
+{"uuid": "d728f7f4-7bad-4587-8010-327045de51d8", "children": ["13a14ec7-97cd-4b58-b327-65776995675d"], "befores": [{"name": "normal_ecg_data", "status": "passed", "start": 1794677642213, "stop": 1794677642213}], "afters": [{"name": "normal_ecg_data::<lambda>", "start": 1794677642214}], "start": 1794677642213, "stop": 1794677642214}
